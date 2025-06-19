@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дневник здоровья</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Логотип">
+            <h1>Персональный дневник здоровья</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Главная страница.html">Главная</a></li>
+                <li><a href="about.html">О проекте</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Меню</h3>
+            <ul>
+                <li><a href="Дневник.html">Дневник</a></li>
+                <li><a href="symptoms.html">Симптомы</a></li>
+                <li><a href="indicators.html">Показатели</a></li>
+                <li><a href="trends.html">Тренды</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <h2>Мой дневник здоровья</h2>
+            
+            <form id="healthForm">
+                <div>
+                    <label for="date">Дата:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                
+                <div>
+                    <label for="symptoms">Симптомы:</label>
+                    <textarea id="symptoms" name="symptoms" rows="3"></textarea>
+                </div>
+                
+                <div>
+                    <label for="temperature">Температура (°C):</label>
+                    <input type="number" step="0.1" id="temperature" name="temperature">
+                </div>
+                
+                <div>
+                    <label for="pressure">Давление:</label>
+                    <input type="text" id="pressure" name="pressure" placeholder="120/80">
+                </div>
+                
+                <div>
+                    <label for="weight">Вес (кг):</label>
+                    <input type="number" step="0.1" id="weight" name="weight">
+                </div>
+                
+                <div>
+                    <label for="notes">Заметки:</label>
+                    <textarea id="notes" name="notes" rows="3"></textarea>
+                </div>
+                
+                <button type="submit">Сохранить</button>
+            </form>
+            
+            <div class="chart-container" style="margin-top: 30px;">
+                <canvas id="healthChart"></canvas>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2025 Персональный дневник здоровья</p>
+        <p>Контакты: health@diary.com | +7 (123) 456-78-90</p>
+    </footer>
+
+</body>
+</html>
